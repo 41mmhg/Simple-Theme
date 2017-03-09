@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+<div class='title-block'>
+    <h2 class='article-title'><a href='{{ page.url }}'>
+        {% if page.title %}     
+            {{ page.title }}
+        {% else %}
+            {{ "No title" }}
+        {% endif %}
+    </a></h2>
+    
+    <div class='date'>
+        {% if page.date %}
+            {{ page.date | date: '%Y %B %-d' }}
+        {% else %}
+            {{  }}
+        {% endif %}
+    </div>
+</div>
+
+<article>
+    {{ content }}
+</article>
